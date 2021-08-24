@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.MainActivity">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="https://devapptrato.page.link/quotas"
+      android:autoLink="web"
+      android:textColorLink="@color/blue"
+      android:layout_marginBottom="32dp"/>
+
+  <Button
+      android:id="@+id/progressLine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Progress Line"
+      />
+
+    <Button
+        android:id="@+id/graphView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Graph View"/>
+
+  <Button
+      android:id="@+id/icons_avd"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Graph View"/>
+</LinearLayout>

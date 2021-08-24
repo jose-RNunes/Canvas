@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.MainActivity">
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/black"
+        app:dlc_progress_type="start"
+        app:dlc_progress="1"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/green_dark"
+        app:dlc_progress_type="end"
+        app:dlc_progress="0"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/orange"
+        app:dlc_progress_type="end"
+        app:dlc_progress="30"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/blue"
+        app:dlc_progress_type="start"
+        app:dlc_progress="90"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/green_dark"
+        app:dlc_progress_type="start"
+        app:dlc_progress="10"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine7"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/orange"
+        app:dlc_progress_type="start"
+        app:dlc_progress="100"
+        />
+
+
+    <com.canvas.ProgressLine
+        android:id="@+id/progressLine8"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:dlc_progress_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_progress_background_stroke="@dimen/dlc_progress_stroke"
+        app:dlc_color="@color/lightGrey"
+        app:dlc_progress_color="@color/blue"
+        app:dlc_progress_type="start"
+        app:dlc_progress="50"
+        />
+
+</LinearLayout>
