@@ -1,22 +1,24 @@
-package com.canvas
+package com.canvas.arc
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.PointF
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
+import com.canvas.BaseCanvasView
+import com.extensions.RectFFactory
+import kotlin.math.min
 
 
-class MyStrokeCircleView@JvmOverloads constructor(
+class StepArcView(
     context: Context,
     attrs: AttributeSet? = null
-) : View(context, attrs) {
+) : BaseCanvasView(context, attrs) {
 
     private var mPaint: Paint? = null
-    private var mRect: RectF? = null
-    private var mPadding = 100f
     private var mSections = 0
     private var mFullArcSliceLength = 0
     private var mColorArcLineLength = 0
@@ -42,21 +44,11 @@ class MyStrokeCircleView@JvmOverloads constructor(
         mColorArcLineLength = mFullArcSliceLength - 2 * mArcSectionGap
     }
 
-    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        super.onSizeChanged(w, h, oldw, oldh)
-       mRect = RectF(
-            0 + mPadding,
-            0 + mPadding,
-            width - mPadding,
-            height - mPadding
-        )
-    }
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         for (i in 0 until mSections) {
             canvas.drawArc(
-                mRect!!,
+                getBounds(),
                 (i * mFullArcSliceLength + mArcSectionGap).toFloat(),
                 mColorArcLineLength.toFloat(),
                 false,
@@ -64,4 +56,13 @@ class MyStrokeCircleView@JvmOverloads constructor(
             )
         }
     }
+
+    private fun getBounds(): RectF {
+        return RectFFactory.fromCircle(
+            PointF(contentRect.centerX(), contentRect.centerY()),
+            getRadius()
+        )
+    }
+
+    private fun getRadius() = min(contentRect.right, contentRect.bottom) / 2
 }

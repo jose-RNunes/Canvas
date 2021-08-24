@@ -1,12 +1,11 @@
-package com.canvas
+package com.canvas.arc
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.RectF
 import android.util.AttributeSet
-import android.view.View
-import com.canvas.circle.DrawCircle
+import com.canvas.BaseCanvasView
+import com.canvas.R
 import com.extensions.getCompactColor
 
 class CircleView @JvmOverloads constructor(

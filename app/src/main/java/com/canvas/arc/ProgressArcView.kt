@@ -1,18 +1,20 @@
-package com.canvas
+package com.canvas.arc
 
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import android.util.DisplayMetrics
-import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
+import com.canvas.BaseCanvasView
+import com.canvas.R
+import com.extensions.RectFFactory
+import kotlin.math.min
 
 
-class ArchChartView @JvmOverloads constructor(
+class ProgressArcView(
     context: Context,
     attrs: AttributeSet? = null
-) : View(context, attrs) {
+) : BaseCanvasView(context, attrs) {
 
     private var mCircleRect: RectF? = null
     private var mProgressPaint: Paint? = null
@@ -34,12 +36,10 @@ class ArchChartView @JvmOverloads constructor(
             mProgressColor =
                 typedArray.getColor(R.styleable.ArchChartView_ac_progress_color, DEFAULT_COLOR);
             mBgColor = typedArray.getColor(R.styleable.ArchChartView_ac_bg_color, DEFAULT_BG_COLOR);
-            mStrokeWidth = dpToPx(
-                typedArray.getDimension(
-                    R.styleable.ArchChartView_ac_stroke_width,
+            mStrokeWidth = typedArray.getDimension(
+                R.styleable.ArchChartView_ac_stroke_width,
                     DEFAULT_STROKE_WIDTH
                 )
-            );
             setProgress(typedArray.getInt(R.styleable.ArchChartView_ac_progress, 50));
             init()
             typedArray.recycle()
@@ -72,28 +72,8 @@ class ArchChartView @JvmOverloads constructor(
     }
 
     private fun drawChart(canvas: Canvas) {
-        //canvas.scale((-1).toFloat(), 1.toFloat(), (width / 2).toFloat(), (height / 2).toFloat())
-        canvas.drawArc(mCircleRect!!, 0.toFloat(), 360.toFloat(), false, safeBasePaint())
-        canvas.drawArc(mCircleRect!!, 270.toFloat(), -progress.toFloat(), false, safeProgressPaint())
-
-        //canvas.drawArc(mCircleRect!!, 270.toFloat()+ progress.toFloat(), 90.toFloat(), false, safeProgressPaint())
-
-
-    }
-
-    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        super.onSizeChanged(w, h, oldw, oldh)
-        mCircleRect = RectF(
-            0 + mCirclePadding,
-            0 + mCirclePadding,
-            width - mCirclePadding,
-            height - mCirclePadding
-        )
-    }
-
-    fun dpToPx(dp: Float): Float {
-        val displayMetrics = context.resources.displayMetrics
-        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT)).toFloat()
+        canvas.drawArc(getBounds(), 0.toFloat(), 360.toFloat(), false, safeBasePaint())
+        canvas.drawArc(getBounds(), 270.toFloat(), -progress.toFloat(), false, safeProgressPaint())
     }
 
     private fun safeBasePaint() = mBgPaint ?: Paint(Paint.ANTI_ALIAS_FLAG).apply {
@@ -111,4 +91,12 @@ class ArchChartView @JvmOverloads constructor(
         shader = SweepGradient(0f, 0f, intArrayOf(Color.CYAN, Color.MAGENTA, Color.YELLOW), null)
     }
 
+    private fun getBounds(): RectF {
+        return RectFFactory.fromCircle(
+            PointF(contentRect.centerX(), contentRect.centerY()),
+            getRadius()
+        )
+    }
+
+    private fun getRadius() = min(contentRect.right, contentRect.bottom) / 2
 }

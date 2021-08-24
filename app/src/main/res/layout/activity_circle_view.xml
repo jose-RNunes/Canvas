@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.canvas.CircleView
+    <com.canvas.arc.CircleView
         android:id="@+id/circle_stroke"
         android:layout_width="0dp"
         android:layout_height="180dp"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.canvas.CircleView
+    <com.canvas.arc.CircleView
         android:id="@+id/circle_fill"
         android:layout_width="0dp"
         android:layout_height="200dp"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/circle_stroke"/>
 
-    <com.canvas.CircleView
+    <com.canvas.arc.CircleView
         android:id="@+id/circle_fill_stroke"
         android:layout_width="0dp"
         android:layout_height="200dp"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/circle_fill"/>
 
-    <com.canvas.SonarView
+    <com.canvas.arc.SonarView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"

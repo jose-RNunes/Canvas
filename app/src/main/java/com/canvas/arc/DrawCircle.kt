@@ -1,8 +1,9 @@
-package com.canvas.circle
+package com.canvas.arc
 
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.RectF
+import kotlin.math.min
 
 class DrawCircle {
 
@@ -13,10 +14,5 @@ class DrawCircle {
         canvas.drawCircle(cx, cy, radius ?: defaultRadius, paint)
     }
 
-    fun getDefaultRadius(bounds: RectF): Float {
-        return (if (bounds.bottom > bounds.right)
-            bounds.right
-        else
-            bounds.bottom) / 2
-    }
+    fun getDefaultRadius(bounds: RectF) = min(bounds.right, bounds.bottom) / 2
 }

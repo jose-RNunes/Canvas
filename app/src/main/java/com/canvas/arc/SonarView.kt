@@ -1,14 +1,13 @@
-package com.canvas
+package com.canvas.arc
 
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.RectF
 import android.util.AttributeSet
-import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
-import com.canvas.circle.DrawCircle
+import com.canvas.BaseCanvasView
+import com.canvas.R
 import com.extensions.getCompactColor
 
 class SonarView @JvmOverloads constructor(
