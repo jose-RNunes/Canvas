@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ArchChartView">
+        <attr name="ac_progress_color" format="color" />
+        <attr name="ac_bg_color" format="color" />
+        <attr name="ac_stroke_width" format="dimension" />
+        <attr name="ac_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressLine">
+        <attr name="dlc_color" format="color" />
+        <attr name="dlc_progress_color" format="color" />
+        <attr name="dlc_progress_stroke" format="dimension" />
+        <attr name="dlc_progress_background_stroke" format="dimension" />
+        <attr name="dlc_progress_type" format="flags">
+            <flag name="start" value="0" />
+            <flag name="end" value="1" />
+        </attr>
+        <attr name="dlc_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="clv_type" format="enum">
+            <enum name="FILL" value="0" />
+            <enum name="STROKE" value="1" />
+            <enum name="FILL_AND_STROKE" value="2" />
+        </attr>
+        <attr name="clv_stroke_width" format="dimension" />
+        <attr name="clv_color" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TicketView">
+        <attr name="tct_color" format="color"/>
+        <attr name="tct_scallop_percent" format="float" />
+        <attr name="tct_scallop_height" format="dimension" />
+        <attr name="tct_corner_radius" format="dimension" />
+        <attr name="tct_stroke_color" format="color" />
+        <attr name="tct_stroke_width" format="dimension" />
+        <attr name="tct_divider_color" format="color" />
+        <attr name="tct_divider_width" format="dimension" />
+        <attr name="tct_divider_dash_width" format="dimension" />
+        <attr name="tct_divider_dash_gap" format="dimension" />
+    </declare-styleable>
+
+</resources>

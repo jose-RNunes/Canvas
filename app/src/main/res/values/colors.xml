@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="darkGrey">#3F3F3F</color>
+    <color name="grey">#6C6C6C</color>
+    <color name="lightGrey">#9B9B9B</color>
+    <color name="veryLightGrey">#CCCCCC</color>
+    <color name="veryLightGrey2">#E5E5E5</color>
+    <color name="veryLightGrey3">#F3F3F3</color>
+
+    <color name="orange">#FB5C00</color>
+    <color name="lightOrange">#EC7F00</color>
+    <color name="veryLightOrange">#FEBE99</color>
+
+
+    <color name="blue">#0083B3</color>
+
+    <color name="lightBlue">#ADD8E6</color>
+
+    <color name="red">#EB5757</color>
+
+    <color name="green">#27AE60</color>
+
+    <color name="green_dark">#00701a</color>
+
+    <color name="yellow">#F2C94C</color>
+
+    <color name="pink">#FFC0CB</color>
+
+    <color name="gold">#a5a504</color>
+    <color name="other">#aab4ba</color>
+    <color name="bg">#F9FAFB</color>
+    <color name="greyOutline">#E3E8EC</color>
+    <color name="colorStart">#9CEBEA</color>
+    <color name="lineColor">#30D6AF</color>
+    <color name="dottedLineColor">#E3E3E3</color>
+    <color name="colorEnd">#F3FEF9</color>
+    <color name="textColor">#94A2B4</color>
+</resources>

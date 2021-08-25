@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dcl_progress_min_width">300dp</dimen>
+    <dimen name="dcl_progress_min_height">20dp</dimen>
+    <dimen name="dlc_progress_stroke">16dp</dimen>
+    <dimen name="dlc_progress_background_stroke">2dp</dimen>
+
+    <dimen name="margin_32">32dp</dimen>
+
+    <dimen name="margin_8">8dp</dimen>
+
+    <dimen name="text_size">20sp</dimen>
+
+</resources>
