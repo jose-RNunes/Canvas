@@ -73,3 +73,5 @@ credentials.properties
 
 # ktlint
 /ktlint.jar
+
+.idea/misc.xml
